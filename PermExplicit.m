@@ -2,7 +2,8 @@
 % Copyright Jack Poulson, 2014
 %
 % Returns the explicit n x n permutation matrix corresponding to
-% the sequence of column swap specified by the pivot vector p.
+% the sequence of column swaps specified by the pivot vector p.
+% If row swaps were desired, then the result should be transposed.
 %
 function P = PermExplicit(p,n)
 

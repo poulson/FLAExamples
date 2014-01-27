@@ -6,7 +6,7 @@
 m=500;n=400;r=10;
 fprintf('m=%d,n=%d,r=%d\n',m,n,r);
 U=randn(m,r)+i*randn(m,r); V=randn(n,r)+i*randn(n,r); A=U*V';
-[Q,R,P]=QRColPivExplicitUnb(A,r);
+[Q,R,P]=QRColPivExplicit(A,r);
 err=norm(A*P-Q*R,'fro');
 froA=norm(A,'fro');
 relErr=err/froA;
@@ -19,7 +19,7 @@ fprintf('\n');
 m=400;n=500;r=10;
 fprintf('m=%d,n=%d,r=%d\n',m,n,r);
 U=randn(m,r)+i*randn(m,r); V=randn(n,r)+i*randn(n,r); A=U*V';
-[Q,R,P]=QRColPivExplicitUnb(A,r);
+[Q,R,P]=QRColPivExplicit(A,r);
 err=norm(A*P-Q*R,'fro');
 froA=norm(A,'fro');
 relErr=err/froA;

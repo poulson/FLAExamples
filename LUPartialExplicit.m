@@ -3,7 +3,7 @@
 %
 % Returns [L,U,P] such that P A = L U
 %
-function [L,U,P] = LUPartialExplicitUnb(A)
+function [L,U,P] = LUPartialExplicit(A)
 [m,n]=size(A);
 k=min(m,n);
 [A,p]=LUPartialUnb(A);

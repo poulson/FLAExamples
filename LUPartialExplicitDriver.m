@@ -6,7 +6,7 @@
 m=500;n=400;
 fprintf('m=%d,n=%d\n',m,n);
 A=randn(m,n)+i*randn(m,n); 
-[L,U,P]=LUPartialExplicitUnb(A);
+[L,U,P]=LUPartialExplicit(A);
 err=norm(P*A-L*U,'fro');
 froA=norm(A,'fro');
 relErr=err/froA;
@@ -19,7 +19,7 @@ fprintf('\n');
 m=400;n=500;
 fprintf('m=%d,n=%d\n',m,n);
 A=randn(m,n)+i*randn(m,n); 
-[L,U,P]=LUPartialExplicitUnb(A);
+[L,U,P]=LUPartialExplicit(A);
 err=norm(P*A-L*U,'fro');
 froA=norm(A,'fro');
 relErr=err/froA;

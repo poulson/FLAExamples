@@ -7,7 +7,7 @@
 % t such that the j'th Householder reflector is (I - t(j) v v'), where
 % v = [1;A(j+1:end,j)]. The column swaps are stored in the pivot vector p.
 %
-function [A,t,p] = QRColPivUnb(A,numSteps)
+function [A,t,p] = QRColPiv(A,numSteps)
 [m,n]=size(A);
 
 k=min(m,n);

@@ -3,7 +3,7 @@
 %
 % Returns [Q,R] such that A = Q R, where Q is unitary and R is upper-triangular
 %
-function [Q,R] = QRExplicitUnb(A)
+function [Q,R] = QRExplicit(A)
 [m,n]=size(A);
 k=min(m,n);
 
