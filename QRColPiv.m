@@ -40,7 +40,7 @@ for j=1:numSteps,
   A(j+1:end,j) = v(2:end);
   t(j)=tau;
   z = v'*A(j:end,j+1:end);
-  A(j:end,j+1:end) = A(j:end,j+1:end) - conj(tau)*v*z;
+  A(j:end,j+1:end) = A(j:end,j+1:end) - tau*v*z;
 
   % Recompute the column norms (TODO: Use a safe updating formula)
   for l=j+1:n,

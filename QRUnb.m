@@ -13,8 +13,8 @@ k=min(m,n);
 t=zeros(k,1);
 for j=1:k,
   [tau,v,beta]=Reflector(A(j:end,j));
-  % Overwrite with (I - conj(tau) v v')A(j:end,j:end)
-  %               = A(j:end,j:end) - conj(tau) v (v' A(j:end,j:end))
+  % Overwrite with (I - tau v v')A(j:end,j:end)
+  %               = A(j:end,j:end) - tau v (v' A(j:end,j:end))
   % and then, since v is equal to 1 in its first entry, store v(2:end) 
   % below the diagonal of R
   A(j,      j) = beta;
@@ -22,5 +22,5 @@ for j=1:k,
   t(j)=tau;
 
   z = v'*A(j:end,j+1:end);
-  A(j:end,j+1:end) = A(j:end,j+1:end) - conj(tau)*v*z;
+  A(j:end,j+1:end) = A(j:end,j+1:end) - tau*v*z;
 end
